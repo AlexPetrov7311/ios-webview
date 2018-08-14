@@ -14,6 +14,7 @@
 		E22FD3F31E97A72A00471EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22FD3F11E97A72A00471EB7 /* LaunchScreen.storyboard */; };
 		E22FD3FE1E97A72B00471EB7 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22FD3FD1E97A72B00471EB7 /* testTests.swift */; };
 		E22FD4091E97A72B00471EB7 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22FD4081E97A72B00471EB7 /* testUITests.swift */; };
+		E258067F21229F7000A83522 /* WKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258067E21229F7000A83522 /* WKViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E22FD4041E97A72B00471EB7 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22FD4081E97A72B00471EB7 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		E22FD40A1E97A72B00471EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E258067E21229F7000A83522 /* WKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E22FD3EF1E97A72A00471EB7 /* Assets.xcassets */,
 				E22FD3F11E97A72A00471EB7 /* LaunchScreen.storyboard */,
 				E22FD3F41E97A72A00471EB7 /* Info.plist */,
+				E258067E21229F7000A83522 /* WKViewController.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22FD3EB1E97A72A00471EB7 /* ViewController.swift in Sources */,
+				E258067F21229F7000A83522 /* WKViewController.swift in Sources */,
 				E22FD3E91E97A72A00471EB7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaspi.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaspi.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +511,7 @@
 				E22FD40F1E97A72B00471EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E22FD4101E97A72B00471EB7 /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +520,7 @@
 				E22FD4121E97A72B00471EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E22FD4131E97A72B00471EB7 /* Build configuration list for PBXNativeTarget "testUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +529,7 @@
 				E22FD4151E97A72B00471EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
