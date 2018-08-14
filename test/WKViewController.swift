@@ -11,22 +11,27 @@ import AVFoundation
 import WebKit
 
 class WKViewController: UIViewController, WKNavigationDelegate {
-    @IBOutlet var webView: WKWebView!
+    @IBOutlet var webView: PWKWebView!
     
     override func viewDidLoad() {
+        print("q    wqw")
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        //        UserDefaults.standard.register(defaults: ["UserAgent": "User-Agent: Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8H7 Safari"]);
         
-//        webView = WKWebView()
+//        webView.delegate = self
+//        webView.loadRequest(URLRequest(url: URL(string: "http://localhost:3000/")!))
+        
+//        webView = PWKWebView()
         webView.navigationDelegate = self
         
-        let myURL = URL(string: "http://localhost:3000/")
+        let myURL = URL(string: "http://localhost:3000")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
     
-    func didFinishNavigation(_ webView: UIWebView)
+    func webViewDidFinishLoad(_ webView: UIWebView)
     {
-        print("asdasd")
         if let cookies = HTTPCookieStorage.shared.cookies {
             for cookie in cookies {
                 print(cookie)
