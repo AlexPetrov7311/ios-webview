@@ -10,41 +10,24 @@ import UIKit
 import AVFoundation
 import WebKit
 
-class WKViewController: UIViewController, WKNavigationDelegate {
+class WKViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     @IBOutlet var webView: WKWebView!
+    
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
     
     override func viewDidLoad() {
         print("q    wqw")
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //        UserDefaults.standard.register(defaults: ["UserAgent": "User-Agent: Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8H7 Safari"]);
         
-//        webView.delegate = self
-//        webView.loadRequest(URLRequest(url: URL(string: "http://localhost:3000/redirect")!))
-        
-//        webView = PWKWebView()
-        webView.navigationDelegate = self
-        
-        let myURL = URL(string: "http://localhost:3000/redirect")
+        let myURL = URL(string: "https://request-redirect-work.herokuapp.com/redirect")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
-    
-    func webViewDidFinishLoad(_ webView: UIWebView)
-    {
-        if let cookies = HTTPCookieStorage.shared.cookies {
-            for cookie in cookies {
-                print(cookie)
-            }
-        }
-        
-        let storage = HTTPCookieStorage.shared
-        for cookie in storage.cookies! {
-            storage.deleteCookie(cookie)
-        }
-        
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
