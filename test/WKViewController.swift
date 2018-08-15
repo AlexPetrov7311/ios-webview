@@ -11,7 +11,7 @@ import AVFoundation
 import WebKit
 
 class WKViewController: UIViewController, WKNavigationDelegate {
-    @IBOutlet var webView: PWKWebView!
+    @IBOutlet var webView: WKWebView!
     
     override func viewDidLoad() {
         print("q    wqw")
@@ -20,12 +20,12 @@ class WKViewController: UIViewController, WKNavigationDelegate {
         //        UserDefaults.standard.register(defaults: ["UserAgent": "User-Agent: Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8H7 Safari"]);
         
 //        webView.delegate = self
-//        webView.loadRequest(URLRequest(url: URL(string: "http://localhost:3000/")!))
+//        webView.loadRequest(URLRequest(url: URL(string: "http://localhost:3000/redirect")!))
         
 //        webView = PWKWebView()
         webView.navigationDelegate = self
         
-        let myURL = URL(string: "http://localhost:3000")
+        let myURL = URL(string: "http://localhost:3000/redirect")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
